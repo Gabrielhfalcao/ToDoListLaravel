@@ -113,7 +113,7 @@ h2{
 }
 
 .quadro-task{
-    overflow: scroll;
+    overflow: auto;
     height: 500px;
 }
 
