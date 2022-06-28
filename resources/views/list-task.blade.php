@@ -24,22 +24,28 @@
                                 <div class="titulo">
                                     <h1>Listas</h1>
                                 </div>
-                                @if($tasks->count())
-                                @foreach($tasks as $task)
-                                <div>
-                                    <p>{{$task->title}}</p>
-                                    <p>{{$task->description}}</p>
-                                </div>
-                                @endforeach
-                                @else
-                                <p>Não possui tasks.</p>
-                                @endif
-
                             </div>
                             <div class="col-lg-2 col-md-2 col-4">
+                                <div class="titulo"></div>
                             </div>
+
+                                
                         </div>
                     </div>
+
+                    <div class="quadro-task">
+                                @if($tasks->count())
+                                    @foreach($tasks as $task)
+                                        <div class="task">
+                                            <p class="titulo-task">{{$task->title}}</p>
+                                            <p class="descricao-task">{{$task->description}}</p>
+                                        </div>
+                                    @endforeach
+                                    @else
+                                    <p>Não possui tasks.</p>
+                                    @endif
+                    </div>
+
                 </div>
             </div>
         </div>
